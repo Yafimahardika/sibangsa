@@ -8,10 +8,10 @@ class ProfilController extends Controller
 {
     public function index()
     {
-        $nama = "Dio Ananda";
-        $nim = "4123031";
+        $nama = "Tiapermata";
+        $nim = "4124045";
         $prodi = "Sistem Informasi";
-        $semester = "6";
+        $semester = "4";
 
         $keahlian = [
             "PHP",
