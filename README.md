@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://unsplash.com/photos/vehicles-parked-on-a-sandy-beach-with-rocky-hills-JJn8DzGs8SA" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
