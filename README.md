@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD >>>>>>>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -8,10 +8,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Tentang Proyek Ini
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyek ini adalah ruang kerja kelompok 1, kelas A, mata kuliah pemrograman website 2.
 
+Anggota Kelompok
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
