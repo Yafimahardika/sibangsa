@@ -1,4 +1,4 @@
-# Jangan Lupa Hapu Komen Saat Seeding Database Baru!
+# Jangan Lupa Hapus Komen Saat Seeding Database Baru!
 
 # Tambahkan source seeders lain pada line 26 DatabaseSeeder!
 
@@ -20,4 +20,45 @@
 
 1. npm install
 2. npm run dev
+
+
+=============================================================================
+Yafi, 16/05/26
+-Menambahkan laravel breeze untuk menampilkan UI login
+-Breeze stack blade with alphine
+-Test framework pest(original)
+
+Tentang migrasi:
+Migrasi akan lebih baik jika tidak dilakukan secara bersama-sama (batch)
+Migrasi satu persatu lebih baik, dan terkoordinir secara urutan sehingga memudahkan untuk rollback
+
+Tentang seeder:
+Database seeder tidak langsung menyambung atau mengerti arah seedernya mau di bawa ke tabel apa, 
+maka dari itu kamu perlu menambahkan model yang terkait dengan tabel yang kamu ingin isi, misalnya:
+`use App/Models/Produk;`
+
+`bcrypt`
+Adalah semacam mekanisme hashing untuk menghindari bruteforce, lebih tepatnya algorimta yang berjalan
+searah, artinya karakter yang sudah di konversi ke
+hash tidak bisa dikembalikan ke bentuk karakter aslinya
+
+_Setup auth sederhana berhasil dibuat, 16:00_
+=============================================================================
+Yafi, 16/05/2026
+-Menambahkan controller untuk CRUD nasabah
+**Eloquent** => Adalah Object Relational Mapping (ORM) yang merepresentasikan:
+# Tabel sebagai model
+# Baris data sebagai objek
+Apa maksudnya? Aku ngga tau.
+
+-file .blade.php harus dibuat manual ya! (kecuali login xixixi)
+
+Daftar nasabah sudah bisa dilihat di /nasabah, btw pake Eloquent bukan Query Builder
+menyesuiakan materi pak miftah.
+
+Ada paket bootstrap yang di install tapi belum di setting config import, npm run dev (compile dengan vite)
+Pada ui blade dipakaikan bootstrap untuk styling yang di panggil lewat CDN
+
+Let's call it a day! _17/05/26, 00:45_
+=============================================================================
 
