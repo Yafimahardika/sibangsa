@@ -60,5 +60,18 @@ Ada paket bootstrap yang di install tapi belum di setting config import, npm run
 Pada ui blade dipakaikan bootstrap untuk styling yang di panggil lewat CDN
 
 Let's call it a day! _17/05/26, 00:45_
-=============================================================================
 
+Class penarikan masih jadi kosong lagi tuh!
+=============================================================================
+Yafi, 17/05/2026
+-Melanjutkkan menambahkan controller untuk CRUD nasabah
+-Fokus pada bagian create/input
+
+Kemarin lupa mencatatat, sudah ada dua data dummy yang bisa untuk demo
+Bingung di bagian `Nasabah::create`, salahnya ditulis `created`
+Sekarang, fungsi _Create_ sudah bisa di pakai.
+Selanjutnya untuk membuat nomor rekening di variabel no_rekening yang sekarang, sementara di setel **NULL**
+
+Blade templating enggine, templating enggine bawaan laravel yang bertugas memisahkan logika backend dengan tampilan HTML. Contohny sintaks `{{ $var }}`
+
+Let's call it a day! _17/05/2026 , 23:35_

@@ -22,7 +22,7 @@ hanya data dalam tabel yang dihapus, itupun bisa diisi lagi dengan seeder
 Jika ingin memnbuat controller maka:
 `php artisan make:controller NamaController`
 Tambahkan `--response` maka akan mengenerate 7 method secara otomatis
-1. Index
+1. Index, Maksudnya READ, untuk menampilkan semua data, contoh `Produk::all()` atau `paginate()`
 2. Create
 3. Store
 4. Show
@@ -34,3 +34,17 @@ Jika ingin membuat **Route** untuk controller, maka:
 `Route::get('/nama_link', [NamaController::class, 'method']);`
 Misal controller untuk nasabah:
 `Route::get('nasabah', [NasabahController::class, 'index']);`
+Maksudnya method dibelakang itu manggil function yang di dibuat di controller, misal index, store
+atau bahkan kustom, kayak tambah, dll.
+
+**Mass Assigmnet**, sebuah filter yang bertujuan untuk membedakan kolom mana yang boleh di isi dan tidak.
+Misal: `protected $table = 'nasabah'` dan `protected $fillable = ['nama', 'alamat']`.
+Di laravel terbaru (8x), bisa tampa menyebut table dulu
+
+Sebuah method dalam kontroler bisa diakses dengan path, misalnya `/nasabah/tambah`
+
+Dua cara penulisan CSRF
+1. Gaya lama: {{ csrf_field() }}, token
+2. gaya baru: @csrf, directive
+
+# Perhatikan penulisan router biasa dengan uri atau yang named route

@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Schema::create('nasabahs', function (Blueprint $table) {
-            // $table->id();
-            // $table->string('no_rekening')->unique();
-            // $table->string('nik')->unique();
-            // $table->string('nama');
-            // $table->text('alamat');
-            // $table->string('no_hp');
-            // $table->decimal('saldo', 15, 2)->default(0);
-            // $table->timestamps();
-        // });
+        Schema::create('nasabahs', function (Blueprint $table) {
+            $table->id();
+            $table->string('no_rekening')->unique();
+            $table->string('nik')->unique();
+            $table->string('nama');
+            $table->text('alamat');
+            $table->string('no_hp');
+            $table->decimal('saldo', 15, 2)->default(0);
+            $table->timestamps();
+        });
     }
 
     /**

@@ -9,19 +9,19 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
-    {
-        // Schema::create('setorans', function (Blueprint $table) {
-        //     $table->id();
-        //     $table->foreignId('nasabah_id')->constrained('nasabahs')->onDelete('cascade');
-        //     $table->foreignId('jenis_sampah_id')->constrained('jenis_sampahs')->onDelete('cascade');
-        //     $table->decimal('berat', 15, 2);
-        //     $table->decimal('harga', 15, 2);
-        //     $table->decimal('total', 15, 2);
-        //     $table->date('tanggal');
-        //     $table->timestamps();
-        // });
-    }
+    // public function up(): void
+    // {
+    //     Schema::create('setorans', function (Blueprint $table) {
+    //         $table->id();
+    //         $table->foreignId('nasabah_id')->constrained('nasabahs')->onDelete('cascade');
+    //         $table->foreignId('jenis_sampah_id')->constrained('jenis_sampahs')->onDelete('cascade');
+    //         $table->decimal('berat', 15, 2);
+    //         $table->decimal('harga', 15, 2);
+    //         $table->decimal('total', 15, 2);
+    //         $table->date('tanggal');
+    //         $table->timestamps();
+    //     });
+    // }
 
     /**
      * Reverse the migrations.

@@ -1,36 +1,30 @@
 <?php
 
+use App\Http\Controllers\NasabahController;
+use App\Http\Controllers\ProfileController;
+use App\Models\Nasabah;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfilController;
-use App\Http\Controllers\KatalogController;
-
 
 Route::get('/', function () {
-    return view('home');
-})->name('home.index');
+    return view('welcome');
+});
 
+// =============================================================
+Route::get('/nasabah', [NasabahController::class, 'index']);
 
-Route::get('/produk', function () {
-    return view('produk.index');
-})->name('produk.index');
+Route::get('/nasabah/tambah', [NasabahController::class, 'tambah'])->name('nasabah.tambah');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about.index');
+Route::post('/nasabah/store', [NasabahController::class, 'store'])->name('nasabah.store');
+// =============================================================
 
-Route::get('/kontak', function () {
-    return view('kontak');
-})->name('kontak.index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-Route::get('/profil', [ProfilController::class, 'index'])
-    ->name('profil.index');
-
-Route::get('/profil/{nim}', [ProfilController::class, 'show'])
-    ->name('profil.show');
-
-Route::get('/katalog', [KatalogController::class, 'index'])
-    ->name('katalog.index');
-
-Route::get('/katalog/{id}', [KatalogController::class, 'show'])
-    ->name('katalog.show');
+require __DIR__.'/auth.php';

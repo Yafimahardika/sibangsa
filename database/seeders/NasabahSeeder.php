@@ -13,7 +13,7 @@ class NasabahSeeder extends Seeder
      */
     public function run(): void
     {
-        Nasabah::truncate();
+        // Nasabah::truncate();
 
         Nasabah::create([
             'no_rekening'=>'BS001',
