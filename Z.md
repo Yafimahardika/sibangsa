@@ -75,3 +75,8 @@ Selanjutnya untuk membuat nomor rekening di variabel no_rekening yang sekarang, 
 Blade templating enggine, templating enggine bawaan laravel yang bertugas memisahkan logika backend dengan tampilan HTML. Contohny sintaks `{{ $var }}`
 
 Let's call it a day! _17/05/2026 , 23:35_
+
+=============================================================================
+Letak repo projek SIBASI dari akun github tiana di pindah ke akun github yafi.
+
+_19/05/2026, 20:55_
