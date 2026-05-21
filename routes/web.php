@@ -9,13 +9,17 @@ use App\Http\Controllers\PenarikanController;
 
 use Illuminate\Support\Facades\Route;
 
-// =============================================================
 Route::get('/', function () {
-    return view('home'); });
+    return view('home');
+})->name('home');
+
 Route::get('/tentang', function () {
-    return view('about'); });
+    return view('about');
+})->name('about');
+
 Route::get('/kontak', function () {
-    return view('kontak'); });
+    return view('kontak');
+})->name('kontak');
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -64,3 +68,4 @@ Route::resource('penarikan', PenarikanController::class);
 });
 
 require __DIR__.'/auth.php';
+
