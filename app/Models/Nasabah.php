@@ -2,10 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Nasabah extends Model
 {
-    protected $table = 'nasabahs';
-    protected $fillable = ['no_rekening','nik','nama','alamat','no_hp','saldo'];
+    use HasFactory;
+
+    protected $fillable = [
+        'nik',
+        'nama',
+        'alamat',
+        'no_rekening',
+        'no_hp'
+    ];
 }

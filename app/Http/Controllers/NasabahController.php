@@ -2,83 +2,78 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Nasabah;
 use Illuminate\Http\Request;
+use App\Models\Nasabah;
 
 class NasabahController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // ✅ HALAMAN UTAMA (nasabah.blade.php)
     public function index()
     {
         $nasabah = Nasabah::all();
-        return view('nasabah', ['nasabah' => $nasabah]);
+        return view('nasabah', compact('nasabah'));
     }
 
-    public function tambah(){
+    // ✅ HALAMAN FORM TAMBAH (nasabah_tambah.blade.php)
+    public function create()
+    {
         return view('nasabah_tambah');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
+    // ✅ SIMPAN DATA
     public function store(Request $request)
     {
         $request->validate([
-            'nik'=>'required',
-            'nama'=>'required',
-            'alamat'=>'required',
-            'no_hp'=>'required'
+            'nik' => 'required',
+            'nama' => 'required',
+            'alamat' => 'required',
+            'no_rekening' => 'required',
+            'no_hp' => 'required',
         ]);
 
         Nasabah::create([
-            'nik'=>$request->nik,
-            'nama'=>$request->nama,
-            'alamat'=>$request->alamat,
-            'no_hp'=>$request->no_hp
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_rekening' => $request->no_rekening,
+            'no_hp' => $request->no_hp,
         ]);
 
-        return redirect('/nasabah');
+        return redirect()->route('nasabah.index')
+            ->with('success', 'Data berhasil ditambahkan');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    // ✅ EDIT
+    public function edit($id)
     {
-        //
+        $nasabah = Nasabah::findOrFail($id);
+        return view('nasabah_edit', compact('nasabah'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    // ✅ UPDATE
+    public function update(Request $request, $id)
     {
-        //
+        $nasabah = Nasabah::findOrFail($id);
+
+        $nasabah->update([
+            'nik' => $request->nik,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'no_rekening' => $request->no_rekening,
+            'no_hp' => $request->no_hp,
+        ]);
+
+        return redirect()->route('nasabah.index')
+            ->with('success', 'Data berhasil diupdate');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    // ✅ HAPUS
+    public function destroy($id)
     {
-        //
-    }
+        $nasabah = Nasabah::findOrFail($id);
+        $nasabah->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('nasabah.index')
+            ->with('success', 'Data berhasil dihapus');
     }
 }
