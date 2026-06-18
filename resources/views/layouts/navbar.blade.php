@@ -3,7 +3,6 @@
     <h2 class="text-xl font-semibold">
         Sistem Informasi Bank Sampah
     </h2>
-
     <div>
 
         <span class="mr-4">
@@ -12,7 +11,6 @@
 
         <form action="{{ route('logout') }}" method="POST" class="inline">
             @csrf
-
             <button class="bg-red-500 text-white px-4 py-2 rounded">
                 Logout
             </button>

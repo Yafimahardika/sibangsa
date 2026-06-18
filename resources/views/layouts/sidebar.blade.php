@@ -1,11 +1,8 @@
 <div class="w-64 bg-green-700 text-white min-h-screen p-5">
-
     <h1 class="text-2xl font-bold mb-10">
-        SIBANGSI
+        SIBANGSA
     </h1>
-
     <ul class="space-y-3">
-
         <li>
             <a href="{{ route('dashboard') }}" class="block p-3 rounded hover:bg-green-600">
                 Dashboard
@@ -35,7 +32,6 @@
                 Penarikan
             </a>
         </li>
-
     </ul>
 
 </div>
