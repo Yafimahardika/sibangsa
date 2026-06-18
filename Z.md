@@ -80,3 +80,9 @@ Let's call it a day! _17/05/2026 , 23:35_
 Letak repo projek SIBASI dari akun github tiana di pindah ke akun github yafi.
 
 _19/05/2026, 20:55_
+
+<!-- Nothing to report -->
+
+_18/06/2026. 20:10_
+
+Merge conflict karena merubah repo lokal dan keduluan commit sama yang lain. Lebih tepatnya dipersilahkan mendahului.

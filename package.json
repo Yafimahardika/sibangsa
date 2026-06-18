@@ -20,12 +20,8 @@
     },
     "dependencies": {
         "@popperjs/core": "^2.11.8",
-<<<<<<< HEAD
+        "aos": "^2.3.4",
         "bootstrap": "^5.3.8",
         "chart.js": "^4.5.1"
-=======
-        "aos": "^2.3.4",
-        "bootstrap": "^5.3.8"
->>>>>>> 0506c5dbd3f2c574cff177818dab82b721a62cc6
     }
 }
