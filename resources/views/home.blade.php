@@ -4,7 +4,8 @@
     <section class="relative overflow-hidden bg-gradient-to-br from-green-800 via-green-600 to-lime-500 text-white py-28">
         <div class="absolute top-0 left-0 w-96 h-96 bg-white opacity-10 rounded-full blur-3xl"></div>
         <div class="absolute bottom-0 right-0 w-96 h-96 bg-lime-200 opacity-20 rounded-full blur-3xl"></div>
-        <div class="container mx-auto px-6 text-center">
+        <div data-aos="zoom-in"
+        class="container mx-auto px-6 text-center">
             <h1 class="text-5xl font-bold leading-tight mb-6">
                 Kelola Sampah Menjadi
                 Tabungan Bernilai
@@ -25,12 +26,15 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section
+    class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+            <div
+            data-aos="zoom-in-up"
+            class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
                 <div class="bg-green-50 p-8 rounded-3xl text-center shadow hover:shadow-xl transition">
                     <h2 class="text-4xl font-bold text-green-700">
-                        120+
+                        <span id="counter1">0</span>+
                     </h2>
                     <p class="mt-3 text-gray-600">
                         Nasabah Aktif
@@ -38,7 +42,7 @@
                 </div>
                 <div class="bg-green-50 p-8 rounded-3xl text-center shadow hover:shadow-xl transition">
                     <h2 class="text-4xl font-bold text-green-700">
-                        5 Ton
+                        <span id="counter2">0</span> Ton
                     </h2>
                     <p class="mt-3 text-gray-600">
                         Sampah Terkelola
@@ -46,7 +50,7 @@
                 </div>
                 <div class="bg-green-50 p-8 rounded-3xl text-center shadow hover:shadow-xl transition">
                     <h2 class="text-4xl font-bold text-green-700">
-                        Rp 12 Jt
+                        Rp <span id="counter3">0</span> Jt
                     </h2>
                     <p class="mt-3 text-gray-600">
                         Total Saldo
@@ -54,7 +58,7 @@
                 </div>
                 <div class="bg-green-50 p-8 rounded-3xl text-center shadow hover:shadow-xl transition">
                     <h2 class="text-4xl font-bold text-green-700">
-                        24/7
+                        <span id="counter4">0</span>/7
                     </h2>
                     <p class="mt-3 text-gray-600">
                         Sistem Digital
@@ -63,7 +67,9 @@
             </div>
         </div>
         <div class="container mx-auto px-6">
-            <div class="text-center mb-14 mt-14">
+            <div
+            data-aos="fade-up"
+            class="text-center mb-14 mt-14">
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">
                     Fitur Utama Sistem
                 </h2>
@@ -71,10 +77,12 @@
                     Sistem informasi bank sampah modern untuk mempermudah pengelolaan sampah dan transaksi tabungan nasabah.
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div
+            data-aos="slide-left"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white p-8 rounded-3xl shadow hover:-translate-y-2 transition duration-300">
-                    <div class="text-5xl mb-5">
-                        ♻️
+                    <div class="mb-5 text-green-700">
+                        <i data-lucide="recycle" class="w-14 h-14"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-green-700">
                         Setoran Sampah
@@ -85,7 +93,7 @@
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-5">
-                        💰
+                        <i data-lucide="wallet" class="w-14 h-14"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-green-700">
                         Penarikan Saldo
@@ -96,7 +104,7 @@
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-5">
-                        📊
+                        <i data-lucide="chart-column" class="w-14 h-14"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-green-700">
                         Dashboard Statistik
@@ -107,7 +115,7 @@
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow hover:-translate-y-2 transition duration-300">
                     <div class="text-5xl mb-5">
-                        🌱
+                        <i data-lucide="leaf" class="w-14 h-14"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-green-700">
                         Lingkungan Bersih
@@ -120,7 +128,9 @@
         </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section
+    data-aos="slide-right"
+    class="py-20 bg-white">
         <div class="container mx-auto px-6 ">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10 ">
                 <div class="bg-gray-100 p-8 rounded-2xl shadow">
@@ -151,7 +161,9 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <section
+    data-aos="fade-left"
+    class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 {{-- GAMBAR --}}
@@ -203,7 +215,9 @@
         </div>
     </section>
 
-    <section class="py-24 bg-gray-100">
+    <section
+    data-aos="fade-up"
+    class="py-24 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="text-4xl text-green-700 font-bold uppercase tracking-widest">
@@ -290,7 +304,9 @@
         </div>
     </section>
 
-    <section class="py-24 bg-white">
+    <section
+    data-aos="zoom-in-up"
+    class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="text-center mb-20">
                 <span class="text text-4xl text-green-700 font-bold uppercase tracking-widest">

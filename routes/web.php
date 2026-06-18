@@ -54,4 +54,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('penarikan', PenarikanController::class);
 });
 
+    // Route Layanan //
+    Route::get('/layanan', function ()
+    { return view('layanan'); });
+
 require __DIR__.'/auth.php';
