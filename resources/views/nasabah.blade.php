@@ -1,24 +1,9 @@
-<<<<<<< HEAD
 @section('header_title', 'Data Nasabah')
 
 @extends('layouts.app')
 
 @section('content')
 <div class="container mt-5">
-=======
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Data Nasabah</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="container mt-5">
-        <h3>Data Nasabah</h3>
->>>>>>> 0506c5dbd3f2c574cff177818dab82b721a62cc6
 
         <a href="{{ route('nasabah.create') }}" class="btn btn-success mb-3">Tambah</a>
 
@@ -61,10 +46,5 @@
     </div>
 
 </body>
-<<<<<<< HEAD
 </html>
 @endsection
-=======
-
-</html>
->>>>>>> 0506c5dbd3f2c574cff177818dab82b721a62cc6

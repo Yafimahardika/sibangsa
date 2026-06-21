@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NasabahController;
 use App\Http\Controllers\ProfileController;
@@ -45,13 +46,44 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // NASABAH (INI SAJA CUKUP!)
-    Route::resource('nasabah', NasabahController::class);
+    /*
+    |--------------------------------------------------------------------------
+    | MANAJEMEN
+    |--------------------------------------------------------------------------
+    */
 
-    // LAINNYA
-    Route::resource('jenis-sampah', JenisSampahController::class);
-    Route::resource('setoran', SetoranController::class);
-    Route::resource('penarikan', PenarikanController::class);
+    Route::prefix('manajemen')->group(function (){
+        Route::resource('nasabah', NasabahController::class);
+        Route::resource('jenis-sampah', JenisSampahController::class);
+        Route::resource('user', UserController::class);
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | TRANSAKSI
+    |--------------------------------------------------------------------------
+    */
+
+    Route::prefix('transaksi')->group(function () {
+        Route::resource('setoran', SetoranController::class);
+        Route::resource('penarikan', PenarikanController::class);
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | STATISTIK
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/statistik', [StatistikController::class, 'index'])->name('statistik.index');
+
+    /*
+    |--------------------------------------------------------------------------
+    | LAPORAN
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
 });
 
     // Route Layanan //
