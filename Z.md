@@ -86,3 +86,25 @@ _19/05/2026, 20:55_
 _18/06/2026. 20:10_
 
 Merge conflict karena merubah repo lokal dan keduluan commit sama yang lain. Lebih tepatnya dipersilahkan mendahului.
+
+=============================================================================
+tgl/wak: 21/06/2026. 18:38
+
+Yafi lagi...
+Terdapat beberapa penyesuaian di sini. pada controller function edit, store-pada with dan penambahan generator nomor rekening.
+juga pada `->with` pada redirect diganti menjadi satu, untuk mendeteksi dan menampilkan error lebih susah dari yang diperkirakan.
+
+untuk struktur file nasabah juga diubah sesuai sidebar yang dibuat pada rancangan awal,
+maka akan jadi seperti ini:
+../public/nasabah
+nasabah
+|---index.blade.php
+|---create.blade.php
+|---edit.blade.php (update)
+
+terdapat kesalaham pada tabel view nasabah, ada yang tertukar dan tidak urut, sudah di selesaikan.
+
+pada tahap ini fungsi CRUD pada modul nasabah, telah diselesaikan.
+
+Btw, tampilan website home yang dikerjakan rekan-rekan juga bagus (ngga bohong, entah disitu terlibat kating atau tidak)
+=============================================================================

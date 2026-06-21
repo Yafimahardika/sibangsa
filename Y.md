@@ -37,14 +37,27 @@ Misal controller untuk nasabah:
 Maksudnya method dibelakang itu manggil function yang di dibuat di controller, misal index, store
 atau bahkan kustom, kayak tambah, dll.
 
+Untuk route tipe `resource` itu udah mencakup semua function kaya: create, store, show, edit, dll
+jadi kita ngga perlu buat route masing-masing untuk function spesifik
+
+Konvensi resource route pada laravel
+1. `nasabah.destroy` -> DELETE
+2. `nasabah.update` -> PUT/PATCH
+3. `nasabah.store` -> POST
+
 **Mass Assigmnet**, sebuah filter yang bertujuan untuk membedakan kolom mana yang boleh di isi dan tidak.
 Misal: `protected $table = 'nasabah'` dan `protected $fillable = ['nama', 'alamat']`.
 Di laravel terbaru (8x), bisa tampa menyebut table dulu
 
 Sebuah method dalam kontroler bisa diakses dengan path, misalnya `/nasabah/tambah`
 
+CSRF = Cross Site Request Forgery
+setiap form yang melakukan DELETE, PUT/PATCH, POST wajib menyertakan token @csrf
+intinya: laravel buat token sesi, token disisipkan ke form, form dikirimkan-sesi diverifikasi, jika token tidak cocok
+request ditolak.
+
 Dua cara penulisan CSRF
 1. Gaya lama: {{ csrf_field() }}, token
 2. gaya baru: @csrf, directive
 
-# Perhatikan penulisan router biasa dengan uri atau yang named route
+# Perhatikan penulisan route biasa dengan uri atau yang named route

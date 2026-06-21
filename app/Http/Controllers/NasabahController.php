@@ -11,13 +11,13 @@ class NasabahController extends Controller
     public function index()
     {
         $nasabah = Nasabah::all();
-        return view('nasabah', compact('nasabah'));
+        return view('nasabah.index', compact('nasabah'));
     }
 
     // ✅ HALAMAN FORM TAMBAH (nasabah_tambah.blade.php)
     public function create()
     {
-        return view('nasabah_tambah');
+        return view('nasabah.create');
     }
 
     // ✅ SIMPAN DATA
@@ -27,27 +27,40 @@ class NasabahController extends Controller
             'nik' => 'required',
             'nama' => 'required',
             'alamat' => 'required',
-            'no_rekening' => 'required',
             'no_hp' => 'required',
         ]);
+
+        // MEMBUAT NOMOR REKENING
+        $lastNasabah = Nasabah::orderBy('id', 'desc')->first();
+
+        if ($lastNasabah) {
+            $lastNumber = (int) substr($lastNasabah->no_rekening, 2);
+            $newNumber = $lastNumber + 1;
+        } else {
+
+            $newNumber = 1;
+        }
+
+        $noRekening = 'BS' . str_pad($newNumber, 3, 0, STR_PAD_LEFT);
 
         Nasabah::create([
             'nik' => $request->nik,
             'nama' => $request->nama,
             'alamat' => $request->alamat,
-            'no_rekening' => $request->no_rekening,
+            'no_rekening' => $noRekening, // NO REK
             'no_hp' => $request->no_hp,
         ]);
 
         return redirect()->route('nasabah.index')
-            ->with('success', 'Data berhasil ditambahkan');
+            ->with('success', 'Data berhasil dihapus!');
     }
 
     // ✅ EDIT
     public function edit($id)
     {
         $nasabah = Nasabah::findOrFail($id);
-        return view('nasabah_edit', compact('nasabah'));
+        return view('nasabah.edit', compact('nasabah'))
+            ->with('success', 'Data berhasil diedit');
     }
 
     // ✅ UPDATE
@@ -74,6 +87,6 @@ class NasabahController extends Controller
         $nasabah->delete();
 
         return redirect()->route('nasabah.index')
-            ->with('success', 'Data berhasil dihapus');
+            ->with('success', 'Data berhasil dihapus!');
     }
 }
