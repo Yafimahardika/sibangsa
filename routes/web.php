@@ -7,6 +7,9 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\JenisSampahController;
 use App\Http\Controllers\SetoranController;
 use App\Http\Controllers\PenarikanController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\StatistikController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
