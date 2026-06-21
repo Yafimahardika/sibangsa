@@ -107,4 +107,10 @@ terdapat kesalaham pada tabel view nasabah, ada yang tertukar dan tidak urut, su
 pada tahap ini fungsi CRUD pada modul nasabah, telah diselesaikan.
 
 Btw, tampilan website home yang dikerjakan rekan-rekan juga bagus (ngga bohong, entah disitu terlibat kating atau tidak)
+
+Sedang berkerja pada sub modul jenis sampa
+TO-DO List:
+1. Ganti struktur tabel sesuai yang direkomendasikan CO-Pilot
+2. Pada modul nasabah: create, edit tambahkan layout app pada sidebar dan header
+
 =============================================================================
