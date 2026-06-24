@@ -74,3 +74,5 @@ Jadi $var = model::paginate(10);
 
 Memperhalus animasi saat bernavigasi antar modul, dengan x-open, dengan alpine.js, dengan x-clock, yang
 setting display none di style global
+
+menambahkan chevron pada parent sub link sidebar

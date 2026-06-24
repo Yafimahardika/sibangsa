@@ -15,7 +15,9 @@
                 class="p-3 hover:bg-green-600 transition-colors duration-200">
                 <button @click="open = !open" class="w-full text-left flex justify-between items-center">
                     ⚙️ Manajemen
-                    <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">&gt;</span>
+                    <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
                 </button>
                 <ul x-show="open" x-cloack
                     x-transition:enter="transition ease-out duration-300"
@@ -46,7 +48,9 @@
                 class="p-3 hover:bg-green-600 transition-colors duration-200">
                 <button @click="open = !open" class="w-full text-left flex justify-between items-center">
                     💳 Transaksi
-                    <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">&gt;</span>
+                    <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </span>
                 </button>
                 <ul x-show="open" x-cloak
                     x-transition:enter="transition ease-out duration-300"
