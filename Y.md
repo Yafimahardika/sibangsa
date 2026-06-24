@@ -71,3 +71,6 @@ Kalau mau sekalian jalankan seed dan migrate
 
 Untuk membuat pagination `pada function index pada variabel contoh: $users = User::paginate(10)`
 Jadi $var = model::paginate(10);
+
+Memperhalus animasi saat bernavigasi antar modul, dengan x-open, dengan alpine.js, dengan x-clock, yang
+setting display none di style global

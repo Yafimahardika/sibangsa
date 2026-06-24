@@ -152,6 +152,7 @@ Pada state ini yang perlu ditambahkan adalah:
 4. Menambahkan autentikasi tambahan untuk admin, batasan untuk petugas
 5. Merapikan header bawaan, dan mengganti ke header section
 6. Tambahkan pagination pada nasabah
+7. Menambahkna ikon plus pada fitur tambah
 
 User tidak bisa dihapus karena dikhawatirkan mempengaruhi relasi
 
