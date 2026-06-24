@@ -2,63 +2,82 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JenisSampah;
 use Illuminate\Http\Request;
 
 class JenisSampahController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Tampilkan daftar jenis sampah.
      */
     public function index()
     {
-        //
+        $jenis_sampah = JenisSampah::all();
+        return view('jenis_sampah.index', compact('jenis_sampah'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Form tambah jenis sampah.
      */
     public function create()
     {
-        //
+        return view('jenis_sampah.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Simpan data baru.
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'satuan' => 'required|string|max:50',
+            'harga_satuan' => 'required|numeric|min:0',
+            'deskripsi' => 'nullable|string',
+            'status' => 'required|boolean',
+        ]);
+
+        JenisSampah::create($request->all());
+
+        return redirect()->route('jenis-sampah.index')
+                         ->with('success', 'Jenis sampah berhasil ditambahkan.');
     }
 
     /**
-     * Display the specified resource.
+     * Form edit jenis sampah.
      */
-    public function show(string $id)
+    public function edit(JenisSampah $jenis_sampah)
     {
-        //
+        return view('jenis_sampah.edit', compact('jenis_sampah'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Update data.
      */
-    public function edit(string $id)
+    public function update(Request $request, JenisSampah $jenis_sampah)
     {
-        //
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'satuan' => 'required|string|max:50',
+            'harga_satuan' => 'required|numeric|min:0',
+            'deskripsi' => 'nullable|string',
+            'status' => 'required|boolean',
+        ]);
+
+        $jenis_sampah->update($request->all());
+
+        return redirect()->route('jenis-sampah.index')
+                         ->with('success', 'Jenis sampah berhasil diperbarui.');
     }
 
     /**
-     * Update the specified resource in storage.
+     * Hapus data.
      */
-    public function update(Request $request, string $id)
+    public function destroy(JenisSampah $jenis_sampah)
     {
-        //
-    }
+        $jenis_sampah->delete();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return redirect()->route('jenis-sampah.index')
+                         ->with('success', 'Jenis sampah berhasil dihapus.');
     }
 }

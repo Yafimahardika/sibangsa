@@ -10,6 +10,7 @@ use App\Http\Controllers\PenarikanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\StatistikController;
 use App\Http\Controllers\LaporanController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,12 @@ Route::middleware('auth')->group(function () {
         Route::resource('nasabah', NasabahController::class);
         Route::resource('jenis-sampah', JenisSampahController::class);
         Route::resource('user', UserController::class);
+        // Route untuk show form
+        Route::get('user/{id}/reset-password', [UserController::class, 'showResetForm'])->name('user.showResetForm');
+        // Route untuk reset password
+        Route::post('user/{id}/reset-password', [UserController::class, 'resetPassword'])->name('user.resetPassword');
+        // Route untuk aktfikan user
+        Route::post('user/{id}/activate', [UserController::class, 'activate'])->name('user.activate');
     });
 
     /*

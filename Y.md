@@ -61,3 +61,13 @@ Dua cara penulisan CSRF
 2. gaya baru: @csrf, directive
 
 # Perhatikan penulisan route biasa dengan uri atau yang named route
+
+Cara memanggil seed khusus
+`php artisan db:seed --class=JenisSampahSeeder`
+Kalau mau panggil semuanya, daftarkan dulu dbseednya di DatabaseSeeder.php > di $this(call['seed1', 'seed'])
+lalu panggil dengan: php artisan db:seed
+Kalau mau sekalian jalankan seed dan migrate
+`php artisan migrate:fresh --seed`
+
+Untuk membuat pagination `pada function index pada variabel contoh: $users = User::paginate(10)`
+Jadi $var = model::paginate(10);

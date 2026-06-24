@@ -110,7 +110,49 @@ Btw, tampilan website home yang dikerjakan rekan-rekan juga bagus (ngga bohong, 
 
 Sedang berkerja pada sub modul jenis sampa
 TO-DO List:
-1. Ganti struktur tabel sesuai yang direkomendasikan CO-Pilot
+1. ~~Ganti struktur tabel sesuai yang direkomendasikan CO-Pilot~~
 2. Pada modul nasabah: create, edit tambahkan layout app pada sidebar dan header
 
 =============================================================================
+tgl/wak: 22/06/2026. 23:50
+
+Menambahkan pembaruan pada struktur tabel jenis sampah
+
+Pada state ini, CRUD pada jenis sampah telah diselesaikan.
+
+Beberapa hal yang perlu ditambahkan:
+1. ~~Kolom status
+2. Kolom Deskripsi
+3. Kolom Aktif
+4. Mengubah layout tabel menjadi card
+
+=============================================================================
+tgl/wak: 24/06/2026
+
+Pada state ini semua unit manajemen telah berjalan sebagai MVP
+beberapa hal ditambahkan
+
+untuk jenis_sampah:
+../public/jenis_sampah
+|---create.blade.php
+|---edit.blade.php
+|---index.blade.php
+
+untuk user:
+../public/user:
+|---create.blade.php
+|---edit.blade.php
+|---index.blade.php
+|---reset.blade.php (Halaman tambahan untuk reset password)
+
+Pada state ini yang perlu ditambahkan adalah:
+1. Hapus user
+2. Mengahpus user otomatis yang dibuat laravel
+3. Menambahkan pagination
+4. Menambahkan autentikasi tambahan untuk admin, batasan untuk petugas
+5. Merapikan header bawaan, dan mengganti ke header section
+
+User tidak bisa dihapus karena dikhawatirkan mempengaruhi relasi
+
+Pada sesi sebelumnya, telah ditambahkan status dan deskripsi pada jenis sampah,
+namun belum ditampilkan
