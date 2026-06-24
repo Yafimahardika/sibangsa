@@ -1,8 +1,9 @@
+@section('header_title', 'Tambah User')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Tambah User</h2>
+<div class="container mt-5">
     <form action="{{ route('user.store') }}" method="POST">
         @csrf
         <div class="mb-3">
@@ -30,6 +31,7 @@
             </select>
         </div>
         <button type="submit" class="btn btn-success">Simpan</button>
+        <a href="{{ route('user.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

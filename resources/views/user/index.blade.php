@@ -1,15 +1,18 @@
+@section('header_title', 'User')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Daftar User</h2>
-    <a href="{{ route('user.create') }}" class="btn btn-primary mb-3">Tambah User</a>
+<div class="container mt-5">
+    <a href="{{ route('user.create') }}" class="btn btn-success mb-3">
+        <i class="fa-solid fa-plus"></i> Tambah User
+    </a>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Nama</th>

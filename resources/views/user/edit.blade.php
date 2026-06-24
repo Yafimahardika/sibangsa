@@ -1,8 +1,9 @@
+@section('header_title', 'Edit User')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Edit User</h2>
+<div class="container mt-5">
     <form action="{{ route('user.update', $user->id) }}" method="POST">
         @csrf
         @method('PUT')
@@ -30,6 +31,7 @@
             </select>
         </div>
         <button type="submit" class="btn btn-success">Update</button>
+        <a href="{{ route('user.index') }}" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 @endsection

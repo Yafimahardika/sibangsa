@@ -1,9 +1,9 @@
+@section('header_title', 'Reset Password')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Reset Password untuk {{ $user->name }}</h2>
-
+<div class="container mt-5">
     <form action="{{ route('user.resetPassword', $user->id) }}" method="POST">
         @csrf
         <div class="mb-3">

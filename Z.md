@@ -151,8 +151,11 @@ Pada state ini yang perlu ditambahkan adalah:
 3. Menambahkan pagination
 4. Menambahkan autentikasi tambahan untuk admin, batasan untuk petugas
 5. Merapikan header bawaan, dan mengganti ke header section
+6. Tambahkan pagination pada nasabah
 
 User tidak bisa dihapus karena dikhawatirkan mempengaruhi relasi
 
 Pada sesi sebelumnya, telah ditambahkan status dan deskripsi pada jenis sampah,
-namun belum ditampilkan
+namun belum ditampilkan.
+
+mempercantik tampilan sub modul user, dengan menambahkan _fontawesome_
