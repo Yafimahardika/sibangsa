@@ -6,25 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('penarikans', function (Blueprint $table) {
             $table->id();
             $table->foreignId('nasabah_id')->constrained('nasabahs')->onDelete('cascade');
-            $table->decimal('jumlah', 15, 2);
-            $table->date('tanggal');
+            $table->decimal('jumlah', 12, 2);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('penarikans');
+        Schema::dropIfExists('penarikan');
     }
+
 };

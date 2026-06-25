@@ -2,18 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Nasabah extends Model
 {
-    use HasFactory;
+    protected $fillable = ['no_rekening', 'nik', 'nama', 'alamat', 'no_hp', 'saldo'];
 
-    protected $fillable = [
-        'nik',
-        'nama',
-        'alamat',
-        'no_rekening',
-        'no_hp'
-    ];
+    // Relasi: Nasabah punya banyak Setoran
+    public function setoran()
+    {
+        return $this->hasMany(Setoran::class);
+    }
+
+    // Relasi: Nasabah punya banyak Penarikan
+    public function penarikan()
+    {
+        return $this->hasMany(Penarikan::class);
+    }
 }

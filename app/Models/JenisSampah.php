@@ -2,22 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class JenisSampah extends Model
 {
-    use HasFactory;
+    protected $fillable = ['nama', 'harga_satuan', 'satuan', 'deskripsi', 'status'];
 
-    // Nama tabel (opsional, Laravel otomatis cocokkan plural)
-    protected $table = 'jenis_sampahs';
-
-    // Field yang bisa diisi mass-assignment
-    protected $fillable = [
-        'nama',
-        'harga_satuan',
-        'satuan',
-        'deskripsi',
-        'status',
-    ];
+    // Relasi: Jenis Sampah bisa muncul di banyak Setoran
+    public function setoran()
+    {
+        return $this->hasMany(Setoran::class);
+    }
 }
+

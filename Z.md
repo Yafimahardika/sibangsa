@@ -160,3 +160,28 @@ Pada sesi sebelumnya, telah ditambahkan status dan deskripsi pada jenis sampah,
 namun belum ditampilkan.
 
 mempercantik tampilan sub modul user, dengan menambahkan _fontawesome_
+
+=============================================================================
+tgl/wak: 24/06/2026
+
+Re-order pada tabel migrasi, jenis sampah turun ke setelah nasabah
+
+Pengerjaan submodul transaksi: penarikan dan setoran
+Pembuatan hierarki pada penarikan dan setoran.
+../public/view/penarikan
+|---create blade php
+|---index blade php
+
+../public/view/setoran
+|---create blade php
+|---index blade php
+
+Sekaligus controller pada kedua sub modul tersebut telah dibuat, minimal.
+
+To-do list:
+1. Menghapus header pada setiap submodul
+2. Menambahkan method delete/destroy pada submodul setoran
+3. Menambahkan pagination
+
+Model juga diberi relasi ke masing2nya, sehingga fungsi utama aplikasi dapat berjalan dengan baik.
+

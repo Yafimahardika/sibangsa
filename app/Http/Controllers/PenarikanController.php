@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Nasabah;
+use App\Models\penarikan;
+use Illuminate\Validation\ValidationException;
 
 class PenarikanController extends Controller
 {
@@ -11,7 +15,8 @@ class PenarikanController extends Controller
      */
     public function index()
     {
-        //
+        $penarikans = Penarikan::with('nasabah')->latest()->paginate(10);
+        return view('penarikan.index', compact('penarikans'));
     }
 
     /**
@@ -19,7 +24,8 @@ class PenarikanController extends Controller
      */
     public function create()
     {
-        //
+        $nasabahs = Nasabah::all();
+        return view('penarikan.create', compact('nasabahs'));
     }
 
     /**
@@ -27,8 +33,32 @@ class PenarikanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nasabah_id' => 'required|exists:nasabahs,id',
+            'jumlah' => 'required|numeric|min:1000',
+        ]);
+
+        DB::transaction(function () use ($request) {
+            $nasabah = Nasabah::findOrFail($request->nasabah_id);
+
+            if ($nasabah->saldo < $request->jumlah) {
+                throw ValidationException::withMessages([
+                    'jumlah' => 'Saldo tidak mencukupi untuk penarikan',
+                ]);
+            }
+
+            Penarikan::create([
+                'nasabah_id' => $request->nasabah_id,
+                'jumlah' => $request->jumlah,
+            ]);
+
+            $nasabah->saldo -= $request->jumlah;
+            $nasabah->save();
+        });
+
+        return redirect()->route('penarikan.index')->with('success', 'Penarikan berhasil dicatat');
     }
+
 
     /**
      * Display the specified resource.

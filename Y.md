@@ -76,3 +76,6 @@ Memperhalus animasi saat bernavigasi antar modul, dengan x-open, dengan alpine.j
 setting display none di style global
 
 menambahkan chevron pada parent sub link sidebar
+
+pada `foreignId('')->constrainded('nama_tabel')->onDelete('cascade')` 
+Perhatikan pada nama tabel dia plural atau tidak.
