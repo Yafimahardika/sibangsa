@@ -10,7 +10,7 @@ class NasabahController extends Controller
     // ✅ HALAMAN UTAMA (nasabah.blade.php)
     public function index()
     {
-        $nasabah = Nasabah::all();
+        $nasabah = Nasabah::paginate(10);
         return view('nasabah.index', compact('nasabah'));
     }
 

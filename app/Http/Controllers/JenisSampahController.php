@@ -12,7 +12,7 @@ class JenisSampahController extends Controller
      */
     public function index()
     {
-        $jenis_sampah = JenisSampah::all();
+        $jenis_sampah = JenisSampah::paginate(10);
         return view('jenis_sampah.index', compact('jenis_sampah'));
     }
 

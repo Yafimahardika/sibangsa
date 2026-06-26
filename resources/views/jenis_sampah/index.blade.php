@@ -17,7 +17,7 @@
             <i class="fa-solid fa-plus"></i> Tambah Jenis Sampah
         </a>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered table-striped">
             <thead>
                 <tr>
                     <th>No</th>
