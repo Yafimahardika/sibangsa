@@ -1,9 +1,9 @@
+@section('header_title', 'Setoran')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Tambah Setoran</h2>
-
+<div class="container mt-5">
     <form action="{{ route('setoran.store') }}" method="POST">
         @csrf
 

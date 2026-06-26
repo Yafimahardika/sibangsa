@@ -220,3 +220,4 @@ Masalah pada tata letak elemen navbar diselesaikan dengan kombinasi bootstrap fl
 1. Menghapus header pada setiap submodul
 2. Menambahkan method delete/destroy pada submodul setoran
 3. Menambahkan pagination
+4. Belum ada opsi hapus untuk setoran
