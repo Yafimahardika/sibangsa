@@ -1,11 +1,12 @@
+@section('header_title', 'Laporan')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container overflow-x-auto">
-    <h1>Laporan Transaksi Bank Sampah</h1>
+<div class="container mt-5 overflow-x-auto">
 
     {{-- Dropdown pilih bulan --}}
-    <select id="bulan" class="form-control"
+    <select id="bulan" class="form-control mb-4"
         onchange="window.location.href='/laporan/bulan/' + this.value;">
         <option value="">-- Pilih Bulan --</option>
         <option value="1">Januari</option>
@@ -23,13 +24,14 @@
     </select>
 
     @isset($bulan)
-        <p>Periode: Bulan {{ $bulan }}</p>
+        <p class="fs-5">Periode: Bulan {{ $bulan }}</p>
     @endisset
 
     {{-- Tabel Setoran --}}
-    <h3>Setoran</h3>
-    <div class="table-wrapper" style="overflow-x: auto;">
-        <table class="table">
+    <p class="fs-4 fw-bold mb-2">Setoran</p>
+
+    <div class="table-wrapper mb-4" style="overflow-x: auto;">
+        <table class="table table-striped border">
             <thead>
                 <tr>
                     <th>Tanggal</th>
@@ -51,12 +53,15 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{ $setoran->links() }}
     </div>
 
     {{-- Tabel Penarikan --}}
-    <h3>Penarikan</h3>
+    <p class="fs-4 fw-bold mb-2">Penarikan</p>
     <div class="table-wrapper" style="overflow: auto;">
-        <table class="table">
+        <table class="table table-striped border">
+
             <thead>
                 <tr>
                     <th>Tanggal</th>
@@ -74,11 +79,15 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{ $penarikan->links() }}
     </div>
 
     {{-- Tombol Export PDF --}}
     @isset($bulan)
-        <a href="{{ route('laporan.exportPdf', $bulan) }}" class="btn btn-danger">Cetak PDF</a>
+        <a href="{{ route('laporan.exportPdf', $bulan) }}" class="btn btn-danger">
+            <i class="fa-solid fa-print"></i>  Cetak PDF
+        </a>
     @endisset
 </div>
 @endsection

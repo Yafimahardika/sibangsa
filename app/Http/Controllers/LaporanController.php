@@ -11,16 +11,16 @@ class LaporanController extends Controller
 {
     public function index()
     {
-        $setoran   = Setoran::all();
-        $penarikan = Penarikan::all();
+        $setoran   = Setoran::paginate(10);
+        $penarikan = Penarikan::paginate(10);
 
         return view('laporan.index', compact('setoran', 'penarikan'));
     }
 
     public function filter($bulan)
     {
-        $setoran   = Setoran::whereMonth('created_at', $bulan)->get();
-        $penarikan = Penarikan::whereMonth('created_at', $bulan)->get();
+        $setoran   = Setoran::whereMonth('created_at', $bulan)->paginate(10);
+        $penarikan = Penarikan::whereMonth('created_at', $bulan)->paginate(10);
 
         return view('laporan.index', compact('setoran', 'penarikan', 'bulan'));
     }
