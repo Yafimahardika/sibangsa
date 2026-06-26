@@ -54,6 +54,8 @@
             @endforeach
 
         </table>
+
+        {{ $nasabah->links() }}
     </div>
 
 </body>

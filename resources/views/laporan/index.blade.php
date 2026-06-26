@@ -85,7 +85,7 @@
 
     {{-- Tombol Export PDF --}}
     @isset($bulan)
-        <a href="{{ route('laporan.exportPdf', $bulan) }}" class="btn btn-danger">
+        <a href="{{ route('laporan.exportPdf', $bulan) }}" class="btn btn-success">
             <i class="fa-solid fa-print"></i>  Cetak PDF
         </a>
     @endisset

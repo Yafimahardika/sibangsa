@@ -46,5 +46,7 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{ $jenis_sampah->links() }}
     </div>
 @endsection
