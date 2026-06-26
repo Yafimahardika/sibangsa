@@ -13,7 +13,9 @@
     @endif
 
     <div class="container mt-5">
-        <a href="{{ route('jenis-sampah.create') }}" class="btn btn-success mb-3">Tambah Jenis Sampah</a>
+        <a href="{{ route('jenis-sampah.create') }}" class="btn btn-success mb-3">
+            <i class="fa-solid fa-plus"></i> Tambah Jenis Sampah
+        </a>
 
         <table class="table table-bordered">
             <thead>
