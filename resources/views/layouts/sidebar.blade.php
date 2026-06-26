@@ -6,7 +6,7 @@
             <li class="p-3 hover:bg-green-600 transition-colors duration-200 
                 {{ Route::is('dashboard') ? 'bg-green-800 font-bold' : '' }}" >
                 <a href="{{ route('dashboard') }}">
-                    🏠 Dashboard
+                    <i class="fa-solid fa-house"></i> Dashboard
                 </a>
             </li>
 
@@ -14,7 +14,10 @@
             <li x-data="{ open: {{ Route::is('nasabah.*') || Route::is('jenis-sampah.*') || Route::is('user.*') ? 'true' : 'false' }} }" 
                 class="p-3 hover:bg-green-600 transition-colors duration-200">
                 <button @click="open = !open" class="w-full text-left flex justify-between items-center">
-                    ⚙️ Manajemen
+                    <div>
+                        <i class="fa-solid fa-user-gear"></i> Manajemen
+                    </div>
+                    
                     <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">
                         <i class="fa-solid fa-chevron-right"></i>
                     </span>
@@ -30,15 +33,21 @@
                     
                     <li class="p-2 hover:bg-green-500 transition-colors duration-200 
                         {{ Route::is('nasabah.*') ? 'bg-green-800 font-bold' : '' }}">
-                        <a href="{{ route('nasabah.index') }}">👥 Nasabah</a>
+                        <a href="{{ route('nasabah.index') }}">
+                            <i class="fa-solid fa-user-group"></i> Nasabah
+                        </a>
                     </li>
                     <li class="p-2 hover:bg-green-500 transition-colors duration-200 
                         {{ Route::is('jenis-sampah.*') ? 'bg-green-800 font-bold' : '' }}">
-                        <a href="{{ route('jenis-sampah.index') }}">♻️ Jenis Sampah</a>
+                        <a href="{{ route('jenis-sampah.index') }}">
+                            <i class="fa-solid fa-recycle"></i> Jenis Sampah
+                        </a>
                     </li>
                     <li class="p-2 hover:bg-green-500 transition-colors duration-200 
                         {{ Route::is('user.*') ? 'bg-green-800 font-bold' : '' }}">
-                        <a href="{{ route('user.index') }}">👤 User</a>
+                        <a href="{{ route('user.index') }}">
+                            <i class="fa-solid fa-user"></i> User
+                        </a>
                     </li>
                 </ul>
             </li>
@@ -47,7 +56,9 @@
             <li x-data="{ open: {{ Route::is('setoran.*') || Route::is('penarikan.*') ? 'true' : 'false' }} }" 
                 class="p-3 hover:bg-green-600 transition-colors duration-200">
                 <button @click="open = !open" class="w-full text-left flex justify-between items-center">
-                    💳 Transaksi
+                    <div>
+                        <i class="fa-solid fa-credit-card"></i> Transaksi
+                    </div>
                     <span :class="{'rotate-90': open}" class="ml-2 transform transition-transform duration-200">
                         <i class="fa-solid fa-chevron-right"></i>
                     </span>
@@ -63,11 +74,15 @@
                     
                     <li class="p-2 hover:bg-green-500 transition-colors duration-200 
                         {{ Route::is('setoran.*') ? 'bg-green-800 font-bold' : '' }}">
-                        <a href="{{ route('setoran.index') }}">💰 Setoran</a>
+                        <a href="{{ route('setoran.index') }}">
+                            <i class="fa-solid fa-sack-dollar"></i> Setoran
+                        </a>
                     </li>
                     <li class="p-2 hover:bg-green-500 transition-colors duration-200 
                         {{ Route::is('penarikan.*') ? 'bg-green-800 font-bold' : '' }}">
-                        <a href="{{ route('penarikan.index') }}">💸 Penarikan</a>
+                        <a href="{{ route('penarikan.index') }}">
+                            <i class="fa-solid fa-money-bill-1-wave"></i> Penarikan
+                            </a>
                     </li>
                 </ul>
             </li>
@@ -75,13 +90,17 @@
             <!-- Statistik -->
             <li class="p-3 hover:bg-green-600 transition-colors duration-200 
                 {{ Route::is('statistik.index') ? 'bg-green-800 font-bold' : '' }}">
-                <a href="{{ route('statistik.index') }}">📊 Statistik</a>
+                <a href="{{ route('statistik.index') }}">
+                    <i class="fa-solid fa-chart-pie"> </i>Statistik
+                </a>
             </li>
 
             <!-- Laporan -->
             <li class="p-3 hover:bg-green-600 transition-colors duration-200 
                 {{ Route::is('laporan.index') ? 'bg-green-800 font-bold' : '' }}">
-                <a href="{{ route('laporan.index') }}">📑 Laporan</a>
+                <a href="{{ route('laporan.index') }}">
+                    <i class="fa-solid fa-file-lines"> </i>Laporan
+                </a>
             </li>
         </ul>
     </nav>
