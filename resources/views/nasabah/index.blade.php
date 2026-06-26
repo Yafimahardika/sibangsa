@@ -5,7 +5,9 @@
 @section('content')
 <div class="container mt-5">
 
-        <a href="{{ route('nasabah.create') }}" class="btn btn-success mb-3">Tambah</a>
+        <a href="{{ route('nasabah.create') }}" class="btn btn-success mb-3">
+           <i class="fa-solid fa-plus"></i> Tambah
+        </a>
 
         @if(session('success'))
          <div class="alert alert-success alert-dismissible fade show" role="alert">
