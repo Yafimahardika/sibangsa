@@ -1,8 +1,9 @@
+@section('header_title', 'Statistik')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="overflow-y: scroll;">
-    <h2>📊 Statistik Bank Sampah</h2>
+<div class="container mt-5"">
 
     <!-- Filter Form -->
     <form method="GET" action="{{ route('statistik.index') }}" class="mb-4">
@@ -27,7 +28,7 @@
                 </select>
             </div>
             <div class="col-md-3 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary w-100">Filter</button>
+                <button type="submit" class="btn btn-success w-100">Filter</button>
             </div>
         </div>
     </form>
