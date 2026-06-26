@@ -26,7 +26,7 @@
         
         <div class="flex">
             {{-- Sidebar --}}
-            <aside class="w-64 bg-green-700 text-white min-h-screen py-4">
+            <aside class="w-64 bg-green-700 text-white min-h-screen ">
                 @include('layouts.sidebar')
             </aside>
 

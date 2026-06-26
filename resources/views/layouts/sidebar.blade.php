@@ -91,7 +91,7 @@
             <li class="p-3 hover:bg-green-600 transition-colors duration-200 
                 {{ Route::is('statistik.index') ? 'bg-green-800 font-bold' : '' }}">
                 <a href="{{ route('statistik.index') }}">
-                    <i class="fa-solid fa-chart-pie"> </i>Statistik
+                    <i class="fa-solid fa-chart-pie"></i> Statistik
                 </a>
             </li>
 

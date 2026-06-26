@@ -26,5 +26,26 @@ class UserSeeder extends Seeder
             'email' => 'petugas@banksampah.com',
             'password' => bcrypt('password')
         ]);
+
+        User::create([
+            'name' => 'Tiana',
+            'role' => 'admin',
+            'email' => 'tiana@banksampah.com',
+            'password' => bcrypt('tiana123')
+        ]);
+
+        User::create([
+            'name' => 'Elsa',
+            'role' => 'admin',
+            'email' => 'elsa@banksampah.com',
+            'password' => bcrypt('elsa123')
+        ]);
+
+        User::create([
+            'name' => 'Bukan Yafi',
+            'role' => 'admin',
+            'email' => 'bukanyafi@banksampah.com',
+            'password' => bcrypt('bukanyafi123')
+        ]);
     }
 }

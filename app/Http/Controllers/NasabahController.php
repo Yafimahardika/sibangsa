@@ -52,15 +52,14 @@ class NasabahController extends Controller
         ]);
 
         return redirect()->route('nasabah.index')
-            ->with('success', 'Data berhasil dihapus!');
+            ->with('success', 'Data berhasil ditambahkan!');
     }
 
     // ✅ EDIT
     public function edit($id)
     {
         $nasabah = Nasabah::findOrFail($id);
-        return view('nasabah.edit', compact('nasabah'))
-            ->with('success', 'Data berhasil diedit');
+        return view('nasabah.edit', compact('nasabah'));
     }
 
     // ✅ UPDATE
