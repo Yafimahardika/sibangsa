@@ -1,9 +1,9 @@
+@section('header_title', 'Tambah Penarikan')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Tambah Penarikan</h2>
-
+<div class="container mt-5">
     <form action="{{ route('penarikan.store') }}" method="POST">
         @csrf
 

@@ -221,3 +221,4 @@ Masalah pada tata letak elemen navbar diselesaikan dengan kombinasi bootstrap fl
 2. Menambahkan method delete/destroy pada submodul setoran
 3. Menambahkan pagination
 4. Belum ada opsi hapus untuk setoran
+5. Tambahkan filter untuk sub modul penarikan, tambah penarikan

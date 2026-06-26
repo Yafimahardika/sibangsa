@@ -1,11 +1,14 @@
+@section('header_title', 'Penarikan')
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Riwayat Penarikan</h2>
-    <a href="{{ route('penarikan.create') }}" class="btn btn-danger mb-3">Tambah Penarikan</a>
+<div class="container mt-5">
+    <a href="{{ route('penarikan.create') }}" class="btn btn-danger mb-3">
+        <i class="fa-solid fa-plus"></i>  Tambah Penarikan
+    </a>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>Nasabah</th>
