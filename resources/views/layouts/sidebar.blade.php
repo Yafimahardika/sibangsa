@@ -1,5 +1,5 @@
 <aside class="w-64 bg-green-700 text-white h-screen">
-    <div class="p-4 text-xl font-bold">Bank Sampah</div>
+    <!-- <div class="p-4 text-xl font-bold">Bank Sampah</div> -->
     <nav>
         <ul>
             <!-- Dashboard -->

@@ -94,6 +94,8 @@ Route::middleware('auth')->group(function () {
     */
 
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+    Route::get('/laporan/bulan/{bulan}', [LaporanController::class, 'filter'])->name('laporan.filter');
+    Route::get('/laporan/pdf/{bulan}', [LaporanController::class, 'exportPdf'])->name('laporan.exportPdf');
 });
 
     // Route Layanan //

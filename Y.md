@@ -79,3 +79,14 @@ menambahkan chevron pada parent sub link sidebar
 
 pada `foreignId('')->constrainded('nama_tabel')->onDelete('cascade')` 
 Perhatikan pada nama tabel dia plural atau tidak.
+
+Cara mengecek jumlah baris pada suatu tabel
+`php artisan tinker`
+`App\Models\Setoran::count()`
+`App\Models\Penarikan::count()`
+
+Cara mengambil id nasabah secara acak, dengan menggunakan:
+`inRandomOrder()` atau `pluck()`
+
+Cara cek data dummy di controller:
+`dd($setoranData, $penarikanData)`

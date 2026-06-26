@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Nasabah;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Penarikan;
-use App\Models\Nasabah;
+use Illuminate\Support\Carbon;
 
 class PenarikanSeeder extends Seeder
 {
@@ -14,15 +15,13 @@ class PenarikanSeeder extends Seeder
      */
     public function run(): void
     {
-        Penarikan::truncate();
-
-        $nasabah = Nasabah::first();
-
-        if($nasabah) {
+        // Buat data penarikan di 12 bulan
+        for ($i = 1; $i <= 12; $i++) {
             Penarikan::create([
-                'nasabah_id' => $nasabah->id,
-                'jumlah' => 5000,
-                'tanggal' => now()->toDateString(),
+                'nasabah_id' => Nasabah::inRandomOrder()->first()->id, // sesuaikan dengan nasabah yang ada
+                'jumlah' => rand(10000, 500000), // nominal acak Rp 10 ribu - Rp 500 ribu
+                'created_at' => Carbon::create(2026, $i, rand(1,28)),
+                'updated_at' => Carbon::now()
             ]);
         }
 

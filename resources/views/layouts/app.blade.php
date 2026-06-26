@@ -13,29 +13,28 @@
 
     <style>
         [x-cloak] { display: none !important; }
+        .table-wrapper {
+            max-width: 100%;
+            overflow-x: auto;
+        }
     </style>
 </head>
 
 <body class="bg-gray-100">
-
-    <div class="flex min-h-screen">
-
-        {{-- Sidebar --}}
-        @include('layouts.sidebar')
-
-        <div class="flex-1">
-
-            {{-- Navbar --}}
-            @include('layouts.navigation')
+        {{-- Navbar --}}
+        @include('layouts.navigation')
+        
+        <div class="flex">
+            {{-- Sidebar --}}
+            <aside class="w-64 bg-green-700 text-white min-h-screen py-4">
+                @include('layouts.sidebar')
+            </aside>
 
             {{-- Content --}}
-            <main class="p-6">
+            <main class="flex-1 p-6 overflow-x-auto">
                 @yield('content')
-            </main>
-
+            </main> 
         </div>
-
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

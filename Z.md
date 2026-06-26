@@ -162,7 +162,7 @@ namun belum ditampilkan.
 mempercantik tampilan sub modul user, dengan menambahkan _fontawesome_
 
 =============================================================================
-tgl/wak: 24/06/2026
+tgl/wak: 25/06/2026
 
 Re-order pada tabel migrasi, jenis sampah turun ke setelah nasabah
 
@@ -185,3 +185,38 @@ To-do list:
 
 Model juga diberi relasi ke masing2nya, sehingga fungsi utama aplikasi dapat berjalan dengan baik.
 
+Pembuatan modul statistik dengan chart.js: line pada fokus:
+1. Setoran (berat)
+2. Penarikan (Jumlah)
+
+Mendapati masalah pada keasalahan penulisan nama field, field di atas adalah yang benar.
+pada `querySetoran` dab `queryPenarikan` yang digunakan untuk penentuan fungsi tanggal
+diclone deengan method clone (clone $queryName)->whereMonth ...
+
+Pengambilan data dilakukan dengan loop.
+
+Malasah intelphense yang tidak mendeteksi kode dengan baik, tidak diselesaikan 
+dan diabikan. Soululsi penutupan kode @json dengan kutip satu membuat label menjadi rancu
+
+=============================================================================
+tgl/wak: 26/06/2026
+
+Pembuatan modul laporan dengan fungsi lihat dan cetak by bulan ke pdf
+
+Hierarki pada modul laporan:
+../public/view/laporan
+|---index.blade.php (penampil)
+|---pdf.blade.php (layout untuk ekspor file pdf)
+
+Penggantian pada struktur navbar pada /layout/app.blade.php
+dengan sidebar di kiri namun bersama dengan main content disebelah kanan
+Navabar di atas fixed.
+
+Keunggulan: Navabar bisa menyesuaikan ukuran content.
+Kekurangan: Tampilan tidak terlalu cocok untuk website fungsional pada umumnnya
+
+Masalah pada tata letak elemen navbar diselesaikan dengan kombinasi bootstrap flex dan grid
+
+1. Menghapus header pada setiap submodul
+2. Menambahkan method delete/destroy pada submodul setoran
+3. Menambahkan pagination
