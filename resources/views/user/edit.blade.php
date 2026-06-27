@@ -3,7 +3,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5">
+    <div class="container mt-5">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('user.update', $user->id) }}" method="POST">
         @csrf
         @method('PUT')
