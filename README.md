@@ -79,24 +79,25 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
    Atur konfigurasi database
    
 9. Jalankan migration & seeder:
-10. ```bash
+    ```bash
     php artisan migrate --seed
    
-11. Start server:
+10. Start server:
     ```bash
     php artisan serve
 
-13. Jika UI tidak tampail, jalankan:
+11. Jika UI tidak tampail, jalankan:
     ```bash
     npm run dev
 
 ## 👨‍💻 Tim Pengembang
-
-
+- @tianapermatasari-art **(Inactive)**
+- @elsadwilistari-hue **(Inactive)**
+- @yafimahardika **(Active)**
 ## 📌 Catatan
-    - Proyek ini dikembangkan bertahap: MVP → Full System.
-    - Cocok untuk pembelajaran CRUD, relasi database, dan logika bisnis sederhana.
-    - Tujuan utama dari proyek ini adalah membantu Bank Sampah dalam pencatatan, baik itu pencatatan transaksi atau menajemen nasabah.
+- Proyek ini dikembangkan bertahap: MVP → Full System.
+- Cocok untuk pembelajaran CRUD, relasi database, dan logika bisnis sederhana.
+- Tujuan utama dari proyek ini adalah membantu Bank Sampah dalam pencatatan, baik itu pencatatan transaksi atau menajemen nasabah.
         
 ## 📄 Lisensi
 Proyek ini menggunakan lisensi MIT. Silakan gunakan, modifikasi, dan kembangkan sesuai kebutuhan.
