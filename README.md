@@ -63,29 +63,25 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
 1. Clone repository:
    ```bash
    git clone https://github.com/username/sibangsa.git
-   
-2. Clone repository:
-    ```bash
-     git clone https://github.com/username/sibangsa.git
-3. Masuk ke folder sibangsa:
+2. Masuk ke folder sibangsa:
     ```bash
     cd sibangsa
-5. Install dependecies:
+3. Install dependecies:
    ```bash
    php artisan migrate --seed
-7. Setup enviorment:
+4. Setup enviorment:
    Copy `.env.example,` ganti nama mmenjadi `.env`
    Atur konfigurasi database
    
-9. Jalankan migration & seeder:
+5. Jalankan migration & seeder:
     ```bash
     php artisan migrate --seed
    
-10. Start server:
+6. Start server:
     ```bash
     php artisan serve
 
-11. Jika UI tidak tampail, jalankan:
+7. Jika UI tidak tampail, jalankan:
     ```bash
     npm run dev
 
