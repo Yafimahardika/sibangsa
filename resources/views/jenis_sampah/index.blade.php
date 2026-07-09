@@ -34,12 +34,16 @@
                     <td>{{ $js->nama }}</td>
                     <td>{{ $js->satuan }}</td>
                     <td>{{ number_format($js->harga_satuan, 0, ',', '.') }}</td>
-                    <td>
-                        <a href="{{ route('jenis-sampah.edit', $js->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <td class="d-flex justify-content-center gap-1">
+                        <a href="{{ route('jenis-sampah.edit', $js->id) }}" class="btn btn-warning btn-sm">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
                         <form action="{{ route('jenis-sampah.destroy', $js->id) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus data ini?')">Hapus</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus data ini?')">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
                         </form>
                     </td>
                 </tr>

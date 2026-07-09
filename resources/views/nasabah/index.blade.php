@@ -39,15 +39,19 @@
                     <td>{{ $n->alamat }}</td>
                     <td>{{ $n->no_hp }}</td>
                     <td>{{ $n->saldo }}</td>
-                    <td>
+                    <td class="d-flex justify-content-center gap-1">
                         <!-- Edit -->
-                        <a href="{{ route('nasabah.edit', $n->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                        <a href="{{ route('nasabah.edit', $n->id) }}" class="btn btn-warning btn-sm">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
 
                         <!-- Hapus -->
                         <form action="{{ route('nasabah.destroy', $n->id) }}" method="POST" class="d-inline"">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus data ini?')">Hapus</button>
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus data ini?')">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
                         </form>
                     </td>
                 </tr>
