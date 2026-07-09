@@ -63,7 +63,6 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
 1. Clone repository:
    ```bash
    git clone https://github.com/username/sibangsa.git
-   cd sibangsa
    
 2. Clone repository:
     ```bash
@@ -94,6 +93,7 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
 - @tianapermatasari-art **(Inactive)**
 - @elsadwilistari-hue **(Inactive)**
 - @yafimahardika **(Active)**
+  
 ## 📌 Catatan
 - Proyek ini dikembangkan bertahap: MVP → Full System.
 - Cocok untuk pembelajaran CRUD, relasi database, dan logika bisnis sederhana.
