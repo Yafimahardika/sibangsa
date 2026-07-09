@@ -1,10 +1,13 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://sibangsa.xyz/images/Sibangsa1.png" width="400" alt="Laravel Logo"></a></p>
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<!-- <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a> -->
+<!-- <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a> -->
+<!-- <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p> -->
+<a href"https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg">
+</a>
 
 ## Tentang Proyek Ini
 # 🌱 Sibangsa — Sistem Informasi Bank Sampah
@@ -72,7 +75,7 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
    ```bash
    php artisan migrate --seed
 7. Setup enviorment:
-   Copy .env.example, ganti nama mmenjadi .env
+   Copy `.env.example,` ganti nama mmenjadi `.env`
    Atur konfigurasi database
    
 9. Jalankan migration & seeder:
@@ -89,10 +92,11 @@ Relasi antar tabel menggunakan **foreign key** untuk menjaga integritas data.
 
 ## 👨‍💻 Tim Pengembang
 
+
 ## 📌 Catatan
-        ▪ Proyek ini dikembangkan bertahap: MVP → Full System.
-        ▪ Cocok untuk pembelajaran CRUD, relasi database, dan logika bisnis sederhana.
-        ▪ Tujuan utama dari proyek ini adalah membantu Bank Sampah dalam pencatatan, baik itu pencatatan transaksi atau menajemen nasabah.
+    - Proyek ini dikembangkan bertahap: MVP → Full System.
+    - Cocok untuk pembelajaran CRUD, relasi database, dan logika bisnis sederhana.
+    - Tujuan utama dari proyek ini adalah membantu Bank Sampah dalam pencatatan, baik itu pencatatan transaksi atau menajemen nasabah.
         
 ## 📄 Lisensi
 Proyek ini menggunakan lisensi MIT. Silakan gunakan, modifikasi, dan kembangkan sesuai kebutuhan.
