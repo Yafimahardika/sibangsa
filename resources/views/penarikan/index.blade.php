@@ -8,6 +8,15 @@
         <i class="fa-solid fa-plus"></i>  Tambah Penarikan
     </a>
 
+    @if(session('success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('success') }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close">
+                <!--  -->
+            </button>
+        </div>
+    @endif
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
