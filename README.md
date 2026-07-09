@@ -44,6 +44,7 @@ Proyek ini dibuat sebagai solusi digital untuk pencatatan transaksi setoran dan 
 - **Database**: MySQL
 - **Frontend**: Blade / Vite
 - **Version Control**: GitHub
+- **Live Server**: XAMPP
 
 ---
 
